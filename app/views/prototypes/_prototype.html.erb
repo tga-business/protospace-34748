@@ -5,6 +5,7 @@
     <p class="card__summary">
       <%=prototype.cacth_copy %>
     </p>
-    <%= link_to prototype.user.name, prototype_path(prototype.id), method: :get, class: :card__user %>
+    <%= link_to prototype.user.name, "/users/#{prototype.user.id}", method: :get, class: :card__user %>
   </div>
 </div>
+

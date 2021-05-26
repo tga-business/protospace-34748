@@ -7,5 +7,7 @@ class Prototype < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
-  has_many :comments
+  has_many :comments, dependent: :destroy 
 end
+
+#プロトタイプが削除したら紐付いているCommentも削除するdependent: :destroy を使用すること
